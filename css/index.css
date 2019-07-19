@@ -207,10 +207,11 @@ p {
   margin: 0 auto;
 }
 .nav-header {
-  width: 800px;
+  width: 1000px;
   height: 100px;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   background-color: #F6F6F6;
 }
 @media (max-width: 500px) {
