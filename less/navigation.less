@@ -1,1 +1,62 @@
 // Navigation code here
+.nav-header {
+    width: 800px;
+    height: 100px;
+    .flex-column();
+    background-color: @nav-bg;
+    /*position: fixed;
+    top: 0;
+    z-index: 100;*/   
+    
+
+    @media @mobile {
+        width: 100%;
+        height: 100%;        
+      }
+
+    .logo-div {
+        .header-align();
+        width: 100%;
+        color: @header-font-color;
+        font-size: 4.5rem;
+
+        @media @mobile {
+            width: 100%;
+        }
+    }
+
+    nav {
+        .header-align();
+        width: 100%;    
+        
+        @media @mobile {
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: @nav-font;
+            padding: 2%;  
+            border-radius: 10px;
+            font-size: 2.5rem;
+
+            /*&:hover {
+
+               // .animation-hover-mixin(@animationname, @animationduration, @hover-distance); //calls parametric mixin that changes the button color and moves the button upwards
+                //.animation-bgcolor(red, blue);
+                .animation-background-color(@eastern-blue, @funbus-red);
+             }  */      
+
+            @media @mobile {
+                padding: 2%;
+            }
+            
+            
+        }
+
+    }//end nav
+
+
+}//end header
