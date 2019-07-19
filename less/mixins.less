@@ -78,28 +78,13 @@
     
 }
 
-/*.custom-button(@bg-color:#FFBF27, @width:200px, @font:#000){
-    display: block;
-    background-color: @bg-color;
-    margin: 0 10px 20px;
-    cursor: pointer;
-    width: @width;
-    height: 45px;
-    font-size: 2rem;
-    border-radius: 10px;
-    color:@font;
-  
-     &:hover{
-      background-color:@font;
-      color:@bg-color; 
+.animation-background-color(@from-color, @to-color) {
+
+    @keyframes button-hover {
+
+       from {background-color:@from-color;}
+       to {background-color:@to-color;}
     }
-    
-    @media @phone {
-      .book-flight-btn {
-        width: 90%;
-        height: 50px;
-        font-size: 2.5rem;
-      }
-    }*/
-
-
+    animation-name: button-hover;
+    animation-duration:3s;
+}

@@ -44,29 +44,6 @@
   justify-content: center;
   align-items: flex-end;
 }
-/*.custom-button(@bg-color:#FFBF27, @width:200px, @font:#000){
-    display: block;
-    background-color: @bg-color;
-    margin: 0 10px 20px;
-    cursor: pointer;
-    width: @width;
-    height: 45px;
-    font-size: 2rem;
-    border-radius: 10px;
-    color:@font;
-  
-     &:hover{
-      background-color:@font;
-      color:@bg-color; 
-    }
-    
-    @media @phone {
-      .book-flight-btn {
-        width: 90%;
-        height: 50px;
-        font-size: 2.5rem;
-      }
-    }*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -235,9 +212,6 @@ p {
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
-  /*position: fixed;
-    top: 0;
-    z-index: 100;*/
 }
 @media (max-width: 500px) {
   .nav-header {
@@ -276,13 +250,20 @@ p {
   text-decoration: none;
   color: #454A59;
   padding: 2%;
+  border-radius: 10px;
   font-size: 2.5rem;
-  /*&:hover {
-
-               // .animation-hover-mixin(@animationname, @animationduration, @hover-distance); //calls parametric mixin that changes the button color and moves the button upwards
-                //.animation-bgcolor(red, blue);
-                .animation-background-color(@eastern-blue, @funbus-red);
-             }  */
+}
+.nav-header nav a:hover {
+  animation-name: button-hover;
+  animation-duration: 3s;
+}
+@keyframes button-hover {
+  from {
+    background-color: dodgerblue;
+  }
+  to {
+    background-color: orangered;
+  }
 }
 @media (max-width: 500px) {
   .nav-header nav a {
@@ -365,6 +346,7 @@ footer {
     width: 100%;
     padding: 0;
     display: flex;
+    margin-top: 20px;
   }
 }
 .home .walk .walk-text {
@@ -412,6 +394,7 @@ footer {
 @media (max-width: 500px) {
   .home .walk .walk-img {
     width: 100%;
+    margin-top: 20px;
   }
 }
 .home .walk .walk-img img {
