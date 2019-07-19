@@ -251,7 +251,7 @@ p {
   color: #454A59;
   padding: 2%;
   border-radius: 10px;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .nav-header nav a:hover {
   animation-name: button-hover;
