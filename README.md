@@ -33,14 +33,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. What is the difference between an adaptive website and a fully responsive website?
+An adaptive website uses different layouts or templates for different screen sizes (breakpoints) or devices. The website will adapt to these specific screen sizes only. A responsive website uses one layout or template but adjusts to a screen’s size regardless of how large or small it is. A responsive website uses media queries and other responsive web design techniques.
 
 2. Describe what it means to be mobile first vs desktop first.
+Desktop first is a web design strategy where a website is initially designed based on the dimensions and resolution of desktop computers. This means, the website will look best when viewed on a desktop or larger device. The website is then modified to adapt to smaller devices such as tablets and phones. Mobile first means the initial design takes into consideration mobile device browsing constraints and is geared toward the smallest mobile devices. The design is then modified or scaled to adapt to desktop computers or larger devices.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
+Using a hard coded pixel on the html tag is bad practice as it overwrites the user’s default settings on their browser. Using 62.5% as the base value is more accessible because rem units can be converted by the power of 10 instead of 16 (16px is the browser’s default font size). 62.5 * .16 = 10. That means 1rem would equate to 10px throughout the document. Rem units are easier to calculate when using 62.5% but it also allows the user to adjust the font size of your site in their browser settings.
 
 4. How would you describe preprocessing to someone new to CSS?
+Preprocessing allows you to write CSS based on a preprocessor’s syntax. The syntax can be a little different from Vanilla CSS but it also adds some valuable features and functionality which makes CSS easier to use and maintain.
 
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+My favorite concept in CSS is being able to define and use mixins. Writing and grouping code we use repeatedly into one easy to use mixin helps to prevent errors and saves valuable time. So far, importing the different files and keeping track of what goes where has been the most difficult.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 

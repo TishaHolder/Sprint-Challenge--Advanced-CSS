@@ -1,1 +1,90 @@
 // Mixins Here
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+//centers one row
+.flex-row-center {
+    .flex-row();
+    justify-content: center;
+    align-items: center;
+}
+
+//centers more than one row
+.flex-rows-center {
+    .flex-row();
+    justify-content: center;
+    align-content: center;
+
+}
+
+//centers a row horizontally and aligns the items at the bottom of the container
+.flex-row-center-bottom {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+//center one column
+.flex-column-center {
+    .flex-column();
+    justify-content: center;
+    align-items: center;
+}
+
+//centers more than one column
+.flex-columns-center {
+    .flex-column();
+    justify-content: center;
+    align-content: center;
+}
+
+.flex-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+//aligns nav items at the center bottom of the div
+.header-align {
+    .flex-row();
+    .flex-row-center-bottom();
+
+}
+
+//sign up button
+.button-layout(@backgroundcolor: @header-font-color, @textcolor: @white){
+    .flex-row();
+    display: block;
+    text-align: center;
+    background-color: @backgroundcolor;
+    color: @textcolor;
+    width: 50%;
+    padding: 4% 10% 4% 10%;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer; //changes cursor to finger pointer 
+
+    &:hover{
+        background-color:@textcolor;
+        color:@backgroundcolor; 
+      }
+
+    
+}
+
+.animation-background-color(@from-color, @to-color) {
+
+    @keyframes button-hover {
+
+       from {background-color:@from-color;}
+       to {background-color:@to-color;}
+    }
+    animation-name: button-hover;
+    animation-duration:3s;
+}
